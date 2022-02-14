@@ -1,0 +1,26 @@
+.nav_bar {
+    display: flex;
+    height: 50px;
+    background-color: blanchedalmond;
+    border-radius: 30px;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    justify-content: space-between;
+    margin: 30px 10px 30px 10px;
+}
+
+.nav_bar_child {
+    display: flex;
+    border-color: rgb(255, 0, 140);
+    align-items: center;
+    padding: 0 30px 0 30px;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.list_a {
+    margin: 0 10px 0 10px;
+    padding: 1px 10px 1px 10px;
+    border-radius: 30px;
+    background-color: rgb(225, 208, 154);
+}
