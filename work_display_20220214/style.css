@@ -1,0 +1,55 @@
+.display_1 {
+    margin : 2px;
+    border : 3px blue solid;
+    display: inline;
+    width: 200px;
+    height: 300px;
+}
+
+.display_2 {
+    margin : 8px 3px 3px 3px;
+    border : 3px blue solid;
+    display: block;
+}
+
+.display_3 {
+    margin       : 8px 3px 3px 3px;
+    border       : 3px blue solid;
+    display      : grid;
+    justify-items: end;
+}
+
+.display_4 {
+    /* (水平)justify-content:  
+    space-around(前後預留空間後再分配空間)
+    space-between(平均分配空間)
+    */
+
+    /* (重直)align-items : */
+
+    /* (盒子要垂直或水平)flex-direction: */
+
+    /* gap在子元素區分間隔,只有在 justify-content: center有作用 */
+
+    margin         : 8px 3px 3px 3px;
+    border         : 3px blue solid;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    text-align     : center;
+    flex-direction : column;
+    gap            : 10px;
+}
+
+.display_4>div {
+    border: 3px yellow solid;
+}
+.display_5{
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    /* align-content: center; */
+    line-height: 300px;
+
+}
