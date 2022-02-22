@@ -1,0 +1,36 @@
+.set_margin{
+    margin: 10px;
+    border: 5px darkgoldenrod solid;
+    
+}
+.set_padding1{
+    padding: 5px;
+}
+.set_padding2{
+    padding: 10px;
+}
+.set_padding3{
+    padding: 20px;
+}
+.set_padding4{
+    padding: 50px;
+}
+.set_padding5{
+    padding: 51px;
+}
+.set_padding6{
+    padding: 51px;
+}
+.set_padding7{
+    padding: 17px;
+}
+.set_padding8{
+    padding: 51px;
+}
+.set_padding9{
+    padding: 35px;
+}
+.set_padding10{
+    padding: 21px;
+}
+
