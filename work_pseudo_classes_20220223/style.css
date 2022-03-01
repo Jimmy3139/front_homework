@@ -163,9 +163,9 @@
 .box_onepice::after {
     position: absolute;
     content: '';
-    width: 20px;
-    height: 33px;
-    background-image: url('./手臂.png');
+    width: 25px;
+    height: 43px;
+    background-image: url('./魯夫手臂.png');
     background-position: center center;
     background-size: 20px 33px;
     background-repeat: no-repeat;
@@ -190,6 +190,7 @@
     position: relative;
     height: 50px;
     width:80px;
+    text-align: center;
     background-color: aqua;
 }
 .coffee1::before{
@@ -228,9 +229,8 @@
 }
 
 .coffee2{
-    height: 100%;
-    width:100%;
-    position: relative;
+    height: 50px;
+    width:80px;
 }
 .coffee2::before{
     position: absolute;
