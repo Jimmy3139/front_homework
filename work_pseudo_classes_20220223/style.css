@@ -180,3 +180,72 @@
     background-size: 600px 33px;
     width: 600px;
 }
+
+
+#coddee_cup>div>p{
+    margin: 3px;
+}
+
+.coffee1{
+    position: relative;
+    height: 50px;
+    width:80px;
+    background-color: aqua;
+}
+.coffee1::before{
+    position: absolute;
+    height: 0px;
+    width: 100px;
+    content: "";
+    bottom: 0;
+    left: 150px;
+    background-color: rgb(107, 170, 224);
+    transition: all 0.3s;
+}
+.coffee1::after{
+    position: absolute;
+    height: 0px;
+    width: 100px;
+    content: "";
+    bottom: 0;
+    left: 150px;
+    background-color: rgb(2, 114, 86);
+    transition: all 0.3s;
+}
+.coffee1:hover::before{
+    height: 30px;
+    content: "123";
+    text-align: center;
+    z-index: 9;
+    transition: all 0.3s;
+}
+.coffee1:hover::after{
+    height: 80px;
+    z-index: 3;
+    content: "456";
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.coffee2{
+    height: 100%;
+    width:100%;
+    position: relative;
+}
+.coffee2::before{
+    position: absolute;
+    height: 0px;
+    width: 100px;
+    content: "";
+    bottom: 0;
+    left: 150px;
+    background-color: rgb(224, 144, 107);
+    transition: all 0.3s;
+}
+.coffee2:hover::before{
+    height: 160px;
+    content: "789";
+    text-align: center;
+    z-index: 1;
+    transition: all 0.3s;
+}
