@@ -1,0 +1,182 @@
+.pseudo{
+    background-color: beige;
+    position:relative;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+.pseudo::before{
+    background-color: black;
+    position:absolute;
+    content: '';
+    height: 100px;
+    width: 100px;
+    left: 0;
+    transition: all 1s;
+
+}
+.pseudo:hover::before{
+    background-color: black;
+    position:absolute;
+    content: '123';
+    height: 100px;
+    width: 100px;
+    left: 300px;
+    transition: all 1s;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 300px;
+    background-color: black;
+}
+.box::before{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position:absolute;
+    left: -300px;
+    background-repeat: no-repeat;
+    content: "";
+}
+.box:hover::before{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position:absolute;
+    left: 300px;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+
+
+ /* 魯夫 */
+ .box_super {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    font-size: 15px;
+    background-image: url('./人物.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 20;
+}
+
+/* 魯夫的拳頭 */
+.box_super::before {
+    position: absolute;
+    content: '';
+    width: 185px;
+    height: 200px;
+    background-image: url('./拳頭.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 160px;
+    left: 260px;
+    z-index: 99;
+    transition: all 0.3s;
+}
+
+/* 魯夫的拳頭-移動效果 */
+.box_super:hover::before {
+    left: 700px;
+  
+}
+
+
+/* 魯夫的手臂 */
+.box_super::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 30px;
+    background-image: url('./手臂.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 185px;
+    left: 230px;
+    z-index: 1;
+    transition: all 0.3s;
+    /* border: 5px seagreen solid; */
+}
+
+/* 魯夫的手臂-伸縮效果 */
+.box_super:hover::after {
+    background-size: 1000px 100px;
+    width: 600px;
+    height: 60px;
+    border-radius: 45px;
+    top: 175px;
+    left: 250px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+
+
+.box_onepice {
+    position: relative;
+    width: 300px;
+    height: 205px;
+    font-size: 15px;
+    background-image: url('./魯夫.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 2;
+    left: 800px;
+}
+
+
+/* 魯夫的拳頭 */
+.box_onepice::before {
+    position: absolute;
+    content: '';
+    width: 175px;
+    height: 120px;
+    background-image: url('./魯夫拳頭.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 10px;
+    right: 225px;
+    z-index: 3;
+    transition: all 0.3s;
+}
+
+/* 魯夫的拳頭-移動效果 */
+.box_onepice:hover::before {
+    right: 700px;
+}
+
+
+/* 魯夫的手臂 */
+.box_onepice::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 33px;
+    background-image: url('./手臂.png');
+    background-position: center center;
+    background-size: 20px 33px;
+    background-repeat: no-repeat;
+    top: 56px;
+    right: 190px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+/* 魯夫的手臂-伸縮效果 */
+.box_onepice:hover::after {
+    background-size: 600px 33px;
+    width: 600px;
+}
