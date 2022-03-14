@@ -1,0 +1,47 @@
+@media screen and (max-width: 760px) {
+    .text2 {
+        font-size    : 40px;
+        color        : white;
+        font-weight  : 700;
+        margin       : 0;
+        padding      : 33px 25px;
+        border-bottom: 1px gray solid;
+    }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+    .first_port_childern2 {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .third_port_idea_childern1 {
+
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (max-width: 820px) {
+    #second_port_content>div {
+        width       : 700px;
+        gap         : 50px;
+        text-align  : center;
+        padding-left: 170px;
+
+    }
+
+    #second_port_content>div>div {
+        width : 235px;
+        height: 350px;
+    }
+
+
+}
