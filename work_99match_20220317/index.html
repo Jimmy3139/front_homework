@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    
+</style>
+
+<body>
+    <div id="class" class="arr"></div>
+    <script>
+        let objClass = document.getElementById("class");
+        for (let i = 2; i < 10; i++) {
+            let matchDiv = document.createElement("div");
+            for (let j = 1; j < 10; j++) {
+                matchDiv.innerHTML+=`<div class="fortmat">${i} x ${j} = ${i*j}</div>`
+                console.log(`${i}x${j}=`, i * j);
+            }
+            objClass.appendChild(matchDiv);
+        }
+    </script>
+
+</body>
+
+</html>

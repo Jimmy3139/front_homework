@@ -1,0 +1,20 @@
+body{
+    margin: 0 10px;
+}
+.arr {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 500px;
+    background-color: bisque;
+    padding: 0 10px;
+}
+.arr>div{
+    border-right: 1px black dashed ;
+}
+.fortmat{
+    margin-top: 10px;
+    width: 130px;
+    padding-left: 30px;
+}
