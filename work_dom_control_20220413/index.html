@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .appFormat {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .btnInsert {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div id="app" class="appFormat"></div>
+    <div class="btnInsert">
+        <input id="addString" type="text">
+        <button onclick="addList()">新增種類</button>
+    </div>
+
+    <script>
+        const maneList = ['關於我們', '遊戲特色', '遊戲下載', '會員中心'];
+        const appDom = document.getElementById('app');
+        const addString = document.getElementById('addString');
+        maneList.forEach(element => {
+            const dd = document.createElement('a');
+            dd.innerText = element;
+            dd.setAttribute('style', 'color:blue');
+            dd.setAttribute('href', '#');
+            appDom.appendChild(dd);
+        });
+        function addList() {
+            const dd = document.createElement('a');
+            dd.innerText = addString.value;
+            console.log('dd.innerText' + dd.innerText);
+            dd.setAttribute('style', 'color:blue');
+            dd.setAttribute('href', '#');
+            appDom.appendChild(dd);
+        }
+
+    </script>
+
+</body>
+
+</html>
