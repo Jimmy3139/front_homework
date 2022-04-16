@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .test3 {
+        width: 800px;
+        height: 800px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        background-color: antiquewhite;
+    }
+
+    .test4 {
+        width: 50px;
+        height: 50px;
+        /* background-color: rgb(18, 12, 85); */
+    }
+</style>
+
+<body>
+    <button id="btn1" onclick="">隨機產生50個顏色</button>
+    <div id="radom" class="test3">
+
+    </div>
+    <script>
+        const btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', () => {
+            const domColor = ['red', 'rgb(18, 12, 85)', 'yellow']
+            const radom = document.getElementById('radom');
+            radom.innerHTML = "";
+            for (let index = 0; index < 50; index++) {
+                const num = Math.round(Math.random() * 2);
+                const obj = document.createElement('div');
+                obj.setAttribute('class', 'test4')
+                obj.setAttribute('style', `background-color:${domColor[num]}`)
+                radom.appendChild(obj);
+            }
+
+        });
+
+
+        // function get50obj() {
+        //     const domColor = ['red', 'rgb(18, 12, 85)', 'yellow']
+        //     const radom = document.getElementById('radom');
+        //     radom.innerHTML = "";
+        //     for (let index = 0; index < 50; index++) {
+        //         const num = Math.round(Math.random() * 2);
+        //         const obj = document.createElement('div');
+        //         obj.setAttribute('class', 'test4')
+        //         obj.setAttribute('style', `background-color:${domColor[num]}`)
+        //         console.log(obj)
+
+        //         radom.appendChild(obj);
+        //     }
+        // }
+
+
+    </script>
+
+</body>
+
+</html>
