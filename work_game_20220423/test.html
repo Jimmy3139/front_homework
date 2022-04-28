@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    1.先將數組變成第一層陣列
+    2.迴圈判斷 'O' + 'X' 數量是否等於9
+        是 > 判斷 O|X 哪個==5 return O|X
+        否 > return 'draw'
+    -->
+    <script>
+        const arr1 = [['O', 'O', 'X'], ['O', 'X', 'X'], ['O', 'X', 'O']];
+        const arr2 = [['O', 'O', 'X'], ['O', 'X', 'X'], ['X', 'X', 'O']];
+        const arr3 = [['X', 'O', 'X'], ['O', 'X', 'X'], ['O', 'X', '']];
+        CheckGameWinner(arr1);
+        CheckGameWinner(arr2);
+        CheckGameWinner(arr3);
+
+        function CheckGameWinner(params) {
+            const newArr = GetNewFirstLevelArr(params);
+            let O = 0;
+            let X = 0;
+            newArr.forEach(function (element, index) {
+                if (element == 'O') {
+                    O += 1;
+                }
+                if (element == 'X') {
+                    X += 1;
+                }
+            });
+            if ((O + X) < 9) {
+                return console.log('draw');
+            }
+            if (O == 5) {
+                return console.log('O');
+            }
+            if (X == 5) {
+                return console.log('X');
+            }
+
+
+        }
+        function GetNewFirstLevelArr(params) {
+            const newArr = [];
+            params.forEach(element => {
+                element.forEach(item => {
+                    newArr.push(item);
+                });
+
+            });
+            return newArr;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

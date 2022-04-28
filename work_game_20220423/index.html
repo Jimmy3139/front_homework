@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    1.先將數組變成第一層陣列
+    2.迴圈判斷 'O' + 'X' 數量是否等於9(順道將索引位置分別存到兩個陣列中)
+        > 是 繼續判斷哪方贏
+            > 檢查哪個數量等於5進行判斷是否贏的比賽
+                > 從數組中判斷迴圈判斷符合贏的條件就
+                    > return 'O'|'X'
+                    > return '平手'
+        > 否 return 'draw' 
+    -->
+    <script>
+        const arr1 = [['O', 'O', 'X'], ['O', 'X', 'X'], ['O', 'X', 'O']];
+        const arr2 = [['O', 'O', 'X'], ['O', 'X', 'X'], ['X', 'X', 'O']];
+        const arr3 = [['X', 'O', 'X'], ['O', 'X', 'X'], ['O', 'X', 'O']];
+        const arr4 = [['X', 'O', 'X'], ['O', 'X', 'X'], ['O', 'X', '']];
+        const totalWinMethod = [[0, 1, 2], [0, 3, 6], [0, 4, 8], [1, 4, 7], [2, 4, 6], [2, 5, 8], [3, 4, 5], [6, 7, 8]];
+        CheckGameWinner(arr1);
+        CheckGameWinner(arr2);
+        CheckGameWinner(arr3);
+        CheckGameWinner(arr4);
+
+        function CheckGameWinner(params) {
+            const newArr = GetNewFirstLevelArr(params);
+            let O = 0;
+            let X = 0;
+            const oArr = [];
+            const xArr = [];
+            newArr.forEach(function (element, index) {
+                if (element == 'O') {
+                    O += 1;
+                    oArr.push(index);
+                }
+                if (element == 'X') {
+                    X += 1;
+                    xArr.push(index);
+                }
+            });
+            if ((O + X) < 9) {
+                return console.log('draw')
+            }
+            if (O == 5) {
+                return console.log(CheckArrIsWin(totalWinMethod, oArr, 'O'))
+            }
+            if (X == 5) {
+                return console.log(CheckArrIsWin(totalWinMethod, xArr, 'X'))
+            }
+
+
+        }
+        function CheckArrIsWin(winArr, kindArr, kind) {
+            let win = 0;
+            for (let one = 0; one < winArr.length; one++) {
+                for (let two = 0; two < winArr[one].length; two++) {
+                    for (let i = 0; i < kindArr.length; i++) {
+                        if (winArr[one][two] == kindArr[i]) {
+                            win += 1;
+                            break;
+                        }
+                    }
+                }
+                if (win == 3) {
+                    return kind;
+                } else {
+                    win = 0;
+                }
+            }
+            return '平手';
+
+        }
+
+        function GetNewFirstLevelArr(params) {
+            const newArr = [];
+            params.forEach(element => {
+                element.forEach(item => {
+                    newArr.push(item);
+                });
+
+            });
+            return newArr;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

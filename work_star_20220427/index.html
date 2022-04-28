@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        GetStar(3)
+        GetStar(4)
+        GetStar(5)
+
+        function GetStar(num) {
+            console.log(`GetStar(${num})`);
+            let total = '';
+            let star1 = '';
+            let star2 = '';
+            for (let i = 0; i < num * 2 - 1; i++) {
+                if (i < num) {
+                    for (let j = 0; j < i + 1; j++) {
+                        star1 += '*';
+                    }
+                    total += star1 + '\n';
+                    console.log(star1);
+                    star1 = '';
+                } else {
+                    for (let j = i; j < num * 2 - 1; j++) {
+                        star2 += '*';
+                    }
+                    total += star2 + '\n';
+                    console.log(star2);
+                    star2 = '';
+                }
+            }
+            console.log('');
+            console.log(total);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
